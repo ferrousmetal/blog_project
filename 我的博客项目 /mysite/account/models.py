@@ -21,6 +21,8 @@ class UserInfo(models.Model):
     address=models.CharField(max_length=100,blank=True)
     aboutme=models.TextField(blank=True)
     photo=models.ImageField(blank=True)
-
+    class Meta:
+        verbose_name="注册信息"
+        verbose_name_plural=verbose_name
     def __str__(self):
         return self.user.username
